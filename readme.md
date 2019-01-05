@@ -1,4 +1,4 @@
-#User Nexus Interactivity Token System
+# User Nexus Interactivity Token System
 UNIT System = **U**ser **N**exus **I**nteractivity **T**oken **System**
 
 ## System Components
