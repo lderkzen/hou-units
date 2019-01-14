@@ -1,7 +1,7 @@
 # Use Case ###: Name
 
 ### Subject Area
-Group of the use case (e.g. `Player to Player Trading`, `Events`, `Guild Bank`).
+Group of the use case (e.g. `Trading`, `Events`, `Guild Bank`).
 
 ### Actors
 In which role is the use case executed (e.g. `Unauthorized User`, `Normal Guild Member`, `Leadership Member`)?
@@ -17,13 +17,25 @@ What conditions must be met so this use case can be performed? Does this use cas
 What are the possible successful and unseccessful results of this use case?
 
 ### Use Case Description
-List the actions the actor performs, and the responses of the system.
+List of the possible actions the actor performs, and the termination outcomes, including references to mandatory and optional input and output data.
 
 ### Input Summary
-What data input does the actor provide? What is mandatory, what is optional?
+#### Mandatory
+What mandatory data input must the actor provide?  
+Numbering like `IN10`, `IN20`, `IN30`, etc., leaving space in between to add additional data inputs afterwards.
+
+#### Optional
+What optional data input can the actor provide?  
+Numbering like `IN40`, `IN50`, etc., continuing after the mandatory numbering, leaving space in between to add additional data inputs afterwards.
 
 ### Output Summary
-What data output does the system provide?
+#### Mandatory
+What data output will the system always provide?  
+Numbering like `OUT10`, `OUT20`, `OUT30`, etc., leaving space in between to add additional data outputs afterwards.
+
+#### Optional
+What additional data output can the system provide, that won't be provided always?  
+Numbering like `OUT40`, `OUT50`, etc., continuing after the mandatory numbering, leaving space in between to add additional data outputs afterwards.
 
 ### Notes
 Any additional notes to the use case.
