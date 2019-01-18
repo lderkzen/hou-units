@@ -10,7 +10,7 @@ Trading
 `Any Guild Member` may create a trade offer with different options.
 
 ### Preconditions
-User must be logged in.
+- User must be logged in.
 
 ### Termination Outcome
 - **Success 1:** Offer created. User is forwarded to the `My Offers & Requests` tab on the `Trading` page.
@@ -63,10 +63,11 @@ User must be logged in.
     - boolean
 
 ### Output Summary
-- `OUT10`: Offer (`IN10`) is created using (`IN20`, `IN30`, `IN40`, `IN50`, `IN60`, `IN70`).
+- `OUT10`: Offer (`IN10`) is created using (`IN20`, `IN30`, `IN40`, `IN50`, `IN60`, `IN70`) and the state is set to `CREATED` (`NOTE20`).
 - `OUT20`: User forwarded to `My Offers & Requests` tab and is shown (`OUT10`).
 - `OUT30`: User receives Discord notifications.
 - `OUT40`: Validation error message is shown below unvalidated field(s).
 
 ### Notes
 - `NOTE10`: Enum values: UNDEFINED, OFFER, REQUEST
+- `NOTE20`: Enum values: UNDEFINED, CREATED, ACCEPTED, COMPLETED

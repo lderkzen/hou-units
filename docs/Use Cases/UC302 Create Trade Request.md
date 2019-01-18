@@ -10,12 +10,12 @@ Trading
 `Any Guild Member` may create a trade request with different options.
 
 ### Preconditions
-User must be logged in.
+- User must be logged in.
 
 ### Termination Outcome
-- **Success 1**: Request created. User is forwarded to the `My Offers & Requests` tab on the `Trading` page.
-- **Success 2**: Request created. User is forwarded to the `My Offers & Requests` tab on the `Trading` page, and will receive notifications
-- **Failed 1**: Request not created. Error validation message shown under fields which didn't pass validation.
+- **Success 1:** Request created. User is forwarded to the `My Offers & Requests` tab on the `Trading` page.
+- **Success 2:** Request created. User is forwarded to the `My Offers & Requests` tab on the `Trading` page, and will receive notifications
+- **Failed 1:** Request not created. Error validation message shown under fields which didn't pass validation.
 
 ### Use Case Description
 **Success 1**
@@ -59,12 +59,11 @@ User must be logged in.
 	- boolean
 
 ### Output Summary
-- `OUT10`: Request (`IN10`) is created using (`IN20`, `IN30`, `IN40`, `IN50`).
+- `OUT10`: Request (`IN10`) is created using (`IN20`, `IN30`, `IN40`, `IN50`) and the state is set to `CREATED` (`NOTE20`).
 - `OUT20`: User is forwarded to `My Offer & Requests` tab and is shown (`OUT10`).
 - `OUT30`: User receives Discord notifications.
 - `OUT40`: Validation error message is shown below unvalidated field(s).
 
 ### Notes
 - `NOTE10`: Enum values: UNDEFINED, OFFER, REQUEST
-
-
+- `NOTE20`: Enum values: UNDEFINED, CREATED, ACCEPTED, COMPLETED
