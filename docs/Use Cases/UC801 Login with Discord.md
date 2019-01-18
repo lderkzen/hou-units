@@ -52,18 +52,13 @@ Users must have a Discord account.
 ### Input Summary
 #### Mandatory
 - `IN10`: Allowed users, stored in the database.
-
-#### Optional
 - `IN20`: Authentication provided by Discord.
 - `IN30`: `DiscordUserID` provided by Discord.
 
 ### Output Summary
-#### Mandatory
 - `OUT10`: Verification if the user is authorized to access the website.
-
-#### Optional
 - `OUT20`: Forward to the `Dashboard` page.
 - `OUT30`: Forward to the `Forbidden` page.
 
 ### Notes
-Any additional notes to the use case.
+No additional notes to this use case.
