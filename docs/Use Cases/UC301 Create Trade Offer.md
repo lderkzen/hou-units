@@ -22,13 +22,13 @@ User must be logged in.
 2. User provides (`IN10`, `IN20`, `IN30`, `IN40`, `IN50`, `IN60`, `IN70`, `IN80`).
 3. User confirms offer.
 4. Offer is created (`OUT10`).
-5. User forwarded to `My Offers & Requests` tab (`OUT20`) and shown their offer.
+5. User forwarded to `My Offers & Requests` tab (`OUT20`) and shown their offer, notifications send (`OUT30`).
 
 **Failed 1**
 1. User directs to the `Offer & Request Creation` page.
 2. User provides invalid data for (`IN10`, `IN20`, `IN30`, `IN40`, `IN50`, `IN60`, `IN70`, `IN80`).
 3. User confirms offer.
-4. User is shown validation error message (`OUT30`).
+4. User is shown validation error message (`OUT40`).
 
 ### Input Summary
 - `IN10`: Offer or request				| required, enum (`NOTE10`)
