@@ -22,7 +22,8 @@ User must be logged in.
 2. User provides (`IN10`, `IN20`, `IN30`, `IN40`, `IN50`, `IN60`, `IN70`, `IN80`).
 3. User confirms offer.
 4. Offer is created (`OUT10`).
-5. User forwarded to `My Offers & Requests` tab (`OUT20`) and shown their offer, notifications send (`OUT30`).
+5. User forwarded to `My Offers & Requests` tab (`OUT20`) and shown their offer.
+6. User is send notifications (`OUT30`).
 
 **Failed 1**
 1. User directs to the `Offer & Request Creation` page.
