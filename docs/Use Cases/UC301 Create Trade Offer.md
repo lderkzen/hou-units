@@ -38,8 +38,8 @@ User must be logged in.
 8. User will receive notifications for new offers via Discord (`OUT30`).
 
 **Failed 1**
-1. User directs to the `Offer & Request Creation` page.
-2. User selects `Offer` option from radio button group.
+1. User navigates to the `Offer & Request Creation` page.
+2. User selects `Offer` option from radio button group (`IN10`).
 3. User provides incomplete or invalid data for the offer (`IN20`, `IN30`, `IN40`, `IN50`, `IN60`).
 4. User confirms offer.
 5. User is shown validation error message (`OUT40`).
@@ -48,15 +48,15 @@ User must be logged in.
 - `IN10`: Offer or request
     - required, enum (`NOTE10`)
 - `IN20`: Minimum price
-    - required, integer, ranging from 1 to configured system wide maximum.
+    - required, integer, ranging from 1 to configured system wide maximum
 - `IN30`: Instant sale price
-    - required, integer, ranging from (`IN10`) to double of (`IN10`).
+    - required, integer, ranging from (`IN10`) to double of (`IN10`)
 - `IN40`: Offer lifespan
-    - required, datetime, ranging from today + 3 hours to today + 14 days.
+    - required, datetime, ranging from today + 3 hours to today + 14 days
 - `IN50`: Item(s) to be offered
-    - required, object, ranging from 1 to 5.
+    - required, object, ranging from 1 to configured system wide maximum (possibly 1)
 - `IN60`: Amount of each (`IN40`)
-    - required, integer, ranging from 1 to infinite.
+    - required, integer, ranging from 1 to configured system wide maximum
 - `IN70`: Image link
     - string
 - `IN80`: Receive notifications
