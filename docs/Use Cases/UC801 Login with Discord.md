@@ -24,41 +24,41 @@ Users must have a Discord account.
 2. User clicks the `Login with Discord` button.
 3. User is redirected to the Discord authentication page, asking for permissions to trust the application.
 4. User accepts the permissions requested by the application.
-5. User is authenticated by Discord (`IN20`).
-6. `DiscordUserID` (`IN30`) is checked against the allowed users (`IN10`).
-7. User is allowed to access the website (`OUT10`).
-8. User is forwarded to the `Dashboard` page (`OUT20`).
+5. User is authenticated by Discord (`IN10`).
+6. `DiscordUserID` (`IN20`) is checked against the allowed users (`OUT10`).
+7. User is allowed to access the website (`OUT20`).
+8. User is forwarded to the `Dashboard` page (`OUT30`).
 
 **Failed 1**
 1. User directs or is directed to the `Landing` page.
 2. User clicks the `Login with Discord` button.
 3. User is redirected to the Discord authentication page, asking for permissions to trust the application.
 4. User accepts the permissions requested by the application.
-5. User is authenticated by Discord (`IN20`).
-6. `DiscordUserID` (`IN30`) is checked against the allowed users (`IN10`).
-7. User is not allowed to access the website (`OUT10`).
+5. User is authenticated by Discord (`IN10`).
+6. `DiscordUserID` (`IN20`) is checked against the allowed users (`OUT10`).
+7. User is not allowed to access the website (`OUT20`).
 8. Authentication is revoked.
-9. User is forwarded to the `Forbidden` page (`OUT30`).
+9. User is forwarded to the `Forbidden` page (`OUT40`).
 
 **Failed 2**
 1. User directs or is directed to the `Landing` page.
 2. User clicks the `Login with Discord` button.
 3. User is redirected to the Discord authentication page, asking for permissions to trust the application.
 4. User denies the permissions requested by the application.
-5. User is not authenticated by Discord (`IN20`).
-6. User is not allowed to access the website (`OUT10`).
-7. User is forwarded to the `Forbidden` page (`OUT30`).
+5. User is not authenticated by Discord (`IN10`).
+6. User is not allowed to access the website (`OUT20`).
+7. User is forwarded to the `Forbidden` page (`OUT40`).
 
 ### Input Summary
-#### Mandatory
-- `IN10`: Allowed users, stored in the database.
-- `IN20`: Authentication provided by Discord.
-- `IN30`: `DiscordUserID` provided by Discord.
+- `IN10`: Authentication provided by Discord.
+- `IN20`: `DiscordUserID` provided by Discord.
+    - provided by Discord after granting access to the application
 
 ### Output Summary
-- `OUT10`: Verification if the user is authorized to access the website.
-- `OUT20`: Forward to the `Dashboard` page.
-- `OUT30`: Forward to the `Forbidden` page.
+- `OUT10`: Allowed users, stored in the database.
+- `OUT20`: Verification if the user is authorized to access the website.
+- `OUT30`: Forward to the `Dashboard` page.
+- `OUT40`: Forward to the `Forbidden` page.
 
 ### Notes
 No additional notes to this use case.
