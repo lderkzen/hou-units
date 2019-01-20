@@ -22,7 +22,7 @@ Trading
 1. User navigates to the `Offer & Request Creation` page.
 2. User selects `Request` option from radio button group (`IN10`).
 3. User provides request information (`IN20`, `IN30`, `IN40`, `IN50`).
-4. User doesn't want to receive notifications about the request status (`IN60`).
+4. User sets or has set `Send Notifications for Trading` to false in `User Settings` (`IN60`).
 5. User confirms request.
 6. Request is created (`OUT10`).
 7. User is forwarded to `My Offer & Requests` tab (`OUT20`) and shown their request.
@@ -31,7 +31,7 @@ Trading
 1. User navigates to the `Offer & Request Creation` page.
 2. User selects `Request` option from radio button group (`IN10`).
 3. User provides request information (`IN20`, `IN30`, `IN40`, `IN50`).
-4. User wants to receive notifications about the request status (`IN60`).
+4. User sets or has set `Send Notifications for Trading` to true in `User Settings` (`IN60`).
 5. User confirms request.
 6. Request is created (`OUT10`).
 7. User is forwarded to `My Offer & Requests` tab (`OUT20`) and shown their request.
@@ -55,7 +55,7 @@ Trading
 	- required, object, ranging from 1 to configured system wide maximum (possibly 1)
 - `IN50`: Amount of each (`IN40`)
 	- required, integer, ranging from 1 to configured system wide maximum
-- `IN60`: Receive notifications
+- `IN60`: User Setting: Notifications for Trading
 	- boolean
 
 ### Output Summary
