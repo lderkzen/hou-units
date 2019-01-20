@@ -11,15 +11,15 @@ Any `unauthorized user` may attempt to perform a login using the Discord authent
 `Any guild member` will be successfully authenticated and authorized, allowing them to proceed to the main website content.
 
 ### Preconditions
-Users must have a Discord account.
+- Users must have a Discord account.
 
 ### Termination Outcome
-- **Success:** Allowed, authenticated, and forwarded to the dashboard page.
+- **Success 1:** Allowed, authenticated, and forwarded to the dashboard page.
 - **Failed 1:** Not allowed, authentication revoked, and forwarded to the forbidden page.
 - **Failed 2:** Permissions not granted to the application, no authentication performed, and forwarded to the forbidden page.
 
 ### Use Case Description
-**Success**
+**Success 1**
 1. User directs or is directed to the `Landing` page.
 2. User clicks the `Login with Discord` button.
 3. User is redirected to the Discord authentication page, asking for permissions to trust the application.
