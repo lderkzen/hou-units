@@ -10,8 +10,8 @@ These actions are available to everyone, without any authentication or policy:
 
 ## Guild Member Actions
 These actions require a login, and therefore are only available to guild members.  
-`Any Guild Member` that is allowed to use the system, **except** they have been **blocked** from the system explicitly.  
-Guild members can perform ***basic actions***, as well as ***advanced actions***, wheras the later require the fulfillment of certain policies, listed below.
+`Any Guild Member` that is allowed to use the system, **except** when they have been **blocked** from the system explicitly.  
+Guild members can perform ***basic actions***, as well as ***advanced actions***, whereas the later require the fulfillment of certain policies, listed below.
 
 ### Basic Actions
 - Open settings
