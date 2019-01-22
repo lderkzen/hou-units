@@ -22,24 +22,22 @@ Trading
 **Success 1**
 1. User navigates to the `My Bids` tab.
 2. User opens a transaction.
-3. System provides (`OUT10`) and it is false.
-4. User clicks `Report Issue`.
-5. User provides (`IN10`, `IN20`).
-6. User reports issue.
-7. Issue is registered (`OUT30`). 
-8. System assignes officer.
-9. User is shown assigned officer (`OUT20`).
-10. User is forwarded to the `My Bids` tab with the transaction opened (`OUT40`).
-11. The assigned officer receives a notification (`OUT50`) with the transactions url.
+3. User clicks `Report Issue`.
+4. User provides (`IN10`, `IN20`).
+5. User reports issue.
+6. Issue is registered (`OUT20`). 
+7. System assignes officer.
+8. User is shown assigned officer (`OUT10`).
+9. User is forwarded to the `My Bids` tab with the transaction opened (`OUT30`).
+10. The assigned officer receives a notification (`OUT40`) with the transactions url.
 
 **Failed 1**
 1. User navigates to the `My Bids` tab.
 2. User opens a transaction.
-3. System provides (`OUT10`) and it is false.
-4. User clicks `Report Issue`.
-5. User provides (`IN10`, `IN20`).
-6. User reports issue.
-7. User is shown validation error message (`OUT60`).
+3. User clicks `Report Issue`.
+4. User provides (`IN10`, `IN20`).
+5. User reports issue.
+6. User is shown validation error message (`OUT50`).
 
 ### Input Summary
 - `IN10`: Type of issue
@@ -48,12 +46,11 @@ Trading
 	- required, string, max string length 255
 
 ### Output Summary
-- `OUT10`: Transaction confirmed.
-- `OUT20`: Assigned officer.
-- `OUT30`: Issue is registered using (`IN10`, `IN20`).
-- `OUT40`: User is forwarded to `My Bids` tab and is shown the transaction.
-- `OUT50`: The assigned officer (`OUT20`) receives a Discord notification.
-- `OUT60`: Validation error message is shown below unvalidated field(s).
+- `OUT10`: Assigned officer.
+- `OUT20`: Issue is registered using (`IN10`, `IN20`).
+- `OUT30`: User is forwarded to `My Bids` tab and is shown the transaction.
+- `OUT40`: The assigned officer (`OUT10`) receives a Discord notification.
+- `OUT50`: Validation error message is shown below unvalidated field(s).
 
 ### Notes
 - `NOTE10`: Enum values: UNDEFINED, CREATED, ACCEPTED, COMPLETED
