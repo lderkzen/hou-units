@@ -69,4 +69,6 @@ Trading
 - `OUT50`: Other users confirmation
 
 ### Notes
-- `NOTE10`: Enum values: UNDEFINED, CREATED, ACCEPTED, COMPLETED
+- `NOTE10`: Enum values
+	- Requests: UNDEFINED, CREATED, ACCEPTED, COMPLETED
+	- Offers: UNDEFINED, CREATED, BIDDING, ACCEPTED, COMPLETED

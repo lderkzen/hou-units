@@ -73,7 +73,7 @@ Trading
 	- boolean
 
 ### Output Summary
-- `OUT10`: Bid is registered using (`IN10`).
+- `OUT10`: Bid is registered using (`IN10`) and the state is set to `BIDDING` (`NOTE10`).
 - `OUT20`: Bid is registered using (`IN10`) and the state is set to `ACCEPTED` (`NOTE10`).
 - `OUT30`: User receives Discord notifications.
 - `OUT40`: Validation error message is shown below unvalidated field(s).
@@ -83,4 +83,4 @@ Trading
 - `OUT80`: Current user tokens
 
 ### Notes
-- `NOTE10`: Enum values: UNDEFINED, CREATED, ACCEPTED, COMPLETED
+- `NOTE10`: Enum values: UNDEFINED, CREATED, BIDDING, ACCEPTED, COMPLETED
