@@ -14,19 +14,19 @@ These actions require a login, and therefore are only available to guild members
 Guild members can perform ***basic actions***, as well as ***advanced actions***, whereas the later require the fulfillment of certain policies, listed below.
 
 ### Basic Actions
-- Open settings
-- Open profile
+- View and change settings
+- View and change own profile
 - Logout
 - Change the displayed times / time zone
-- See the current token balance
-- See the token forecast
-- See the token history
-- See future events
-- See trading offers
-- See trading requests
-- See guild bank store
-- See guild bank donations
-- See service requests
+- View the current token balance
+- View the token forecast
+- View the token history
+- View future events
+- View trading offers
+- View trading requests
+- View guild bank store
+- View guild bank donations
+- View service requests
 
 ### Advanced Actions
 
@@ -42,9 +42,8 @@ Guild members can perform ***basic actions***, as well as ***advanced actions***
 | JoinEvent | Must be `Any Guild Member`, but not blacklisted from joining events. |
 | LeaveEvent | Must be `Any Guild Member`, but not the creator of the event. |
 | CheckEventAttendance | Must be a `Leader`, `Officer`, or `Coordinator`, who created or joined the event. |
-| AddToJoinEventsBlacklist | Must be a `Leader` or `Officer`. |
-| RemoveFromJoinEventsBlacklist | Must be a `Leader` or `Officer`. |
-| SeePastEvents | Must be a `Leader` or `Officer`,<br>- or -<br>Must be `Any Guild Member`, who created or joined the event. |
+| ManageBlacklistForJoiningEvents | Must be a `Leader` or `Officer`. |
+| ViewEventHistory | Must be a `Leader` or `Officer`,<br>- or -<br>Must be `Any Guild Member`, who created or joined the event. |
 
 ---
 
@@ -56,11 +55,9 @@ Guild members can perform ***basic actions***, as well as ***advanced actions***
 | ReplyServiceRequest | Must be `Any Guild Member`, but not blacklisted from replying service requests. |
 | ConfirmServiceRequest | Must be `Any Guild Member`, and either the creator of the service request or person replying to the service request. |
 | ReportServiceIssue | Must be `Any Guild Member`, and either the creator of the service request or person replying to the service request. |
-| AddToCreateServiceRequestBlacklist | Must be a `Leader` or `Officer`. |
-| RemoveFromCreateServiceRequestBlacklist | Must be a `Leader` or `Officer`. |
-| AddToReplyServiceRequestBlacklist | Must be a `Leader` or `Officer`. |
-| RemoveFromReplyServiceRequestBlacklist | Must be a `Leader` or `Officer`. |
-| SeePastServiceRequests | Must be a `Leader` or `Officer`,<br>- or -<br>Must be `Any Guild Member`, who created the service request or replied to the service request. |
+| ManageBlacklistForCreatingServiceRequest | Must be a `Leader` or `Officer`. |
+| ManageBlacklistForReplyingToServiceRequest | Must be a `Leader` or `Officer`. |
+| ViewServiceRequestHistory | Must be a `Leader` or `Officer`,<br>- or -<br>Must be `Any Guild Member`, who created the service request or replied to the service request. |
 | RevertCompletedServiceRequest | Must be a `Leader`. |
 
 ---
@@ -76,16 +73,12 @@ Guild members can perform ***basic actions***, as well as ***advanced actions***
 | ReplyTradeRequest | Must be `Any Guild Member`, but not blacklisted from replying trade requests. |
 | ConfirmTrade | Must be `Any Guild Member`, and either the creator of the trade or person replying to the trade. |
 | ReportTradeIssue | Must be `Any Guild Member`, and either the creator of the trade or person replying to the trade. |
-| AddToCreateTradeOfferBlacklist | Must be a `Leader` or `Officer`. |
-| RemoveCreateTradeOfferBlacklist | Must be a `Leader` or `Officer`. |
-| AddToCreateTradeRequestBlacklist | Must be a `Leader` or `Officer`. |
-| RemoveCreateTradeRequestBlacklist | Must be a `Leader` or `Officer`. |
-| AddToReplyTradeOfferBlacklist | Must be a `Leader` or `Officer`. |
-| RemoveFromReplyTradeOfferBlacklist | Must be a `Leader` or `Officer`. |
-| AddToReplyTradeRequestBlacklist | Must be a `Leader` or `Officer`. |
-| RemoveFromReplyTradeRequestBlacklist | Must be a `Leader` or `Officer`. |
-| SeePastTrades | Must be a `Leader` or `Officer`,<br>- or -<br>Must be `Any Guild Member`, who created the trade or participated in the trade. |
-| SeeOngoingTrades | Must be a `Leader` or `Officer`. |
+| ManageBlacklistForCreatingTradeOffers | Must be a `Leader` or `Officer`. |
+| ManageBlacklistForCreatingTradeRequests | Must be a `Leader` or `Officer`. |
+| ManageBlacklistForReplyingToTradeOffers | Must be a `Leader` or `Officer`. |
+| ManageBlacklistForReplyingToTradeRequests | Must be a `Leader` or `Officer`. |
+| ViewTradeHistory | Must be a `Leader` or `Officer`,<br>- or -<br>Must be `Any Guild Member`, who created the trade or participated in the trade. |
+| ViewOngoingTrades | Must be a `Leader` or `Officer`. |
 | RevertCompletedTrade | Must be a `Leader`. |
 
 ---
@@ -101,13 +94,11 @@ Guild members can perform ***basic actions***, as well as ***advanced actions***
 | ReplyPurchasableGuildBankItem | Must be `Any Guild Member`, but not blacklisted from replying purchasable guild bank items. |
 | AcceptGuildBankTrade | Must be a `Leader` or `Officer`. |
 | ConfirmGuildBankTrade | Must be a `Leader` or `Officer`, and the person who accepted the guild bank trade,<br>- or -<br>Must be `Any Guild Member`, and the person replying to the guild bank trade. |
-| AddToReplyDonationRequestBlacklist | Must be a `Leader` or `Officer`. |
-| RemoveFromReplyDonationRequestBlacklist | Must be a `Leader` or `Officer`. |
-| AddToReplyPurchasableGuildBankItemBlacklist | Must be a `Leader` or `Officer`. |
-| RemoveFromReplyPurchasableGuildBankItemBlacklist | Must be a `Leader` or `Officer`. |
-| SeePastGuildBankPurchases | Must be a `Any Guild Member`. |
-| SeePastGuildBankDonations | Must be a `Leader` or `Officer`. |
-| SeeOngoingGuildBankTrades | Must be a `Leader` or `Officer`. |
+| ManageBlacklistForReplyingToDonationRequests | Must be a `Leader` or `Officer`. |
+| ManageBlacklistForReplyingToPurchasableGuildBankItems | Must be a `Leader` or `Officer`. |
+| ViewGuildBankPurchaseHistory | Must be a `Any Guild Member`. |
+| ViewGuildBankDonationHistory | Must be a `Leader` or `Officer`. |
+| ViewOngoingGuildBankTrades | Must be a `Leader` or `Officer`. |
 | RevertCompletedGuildBankDonation | Must be a `Leader` or `Quartermaster`. |
 | RevertCompletedGuildBankPurchase | Must be a `Leader` or `Quartermaster`. |
 
@@ -117,6 +108,7 @@ Guild members can perform ***basic actions***, as well as ***advanced actions***
 | Policy Name | Condition |
 | --- | --- |
 | ObtainTitle | Must be `Any Guild Member`, who reached 500 tokens at least once. |
+| ViewOtherProfiles | Must be a `Leader` or `Officer`. |
 
 ---
 
