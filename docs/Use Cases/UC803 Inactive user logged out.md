@@ -1,4 +1,4 @@
-# Use Case 801: Inactive user logged out
+# Use Case 801: Inactive User Logged Out
 
 ### Subject Area
 Security
@@ -7,7 +7,7 @@ Security
 `Any Guild Member`
 
 ### Overview
-`Any guild member` will be automatically logged out, if he didn't visit the site for too long.
+`Any guild member` will be automatically logged out, if he didn't visit the site for a while.
 
 ### Preconditions
 - Users must be logged in.

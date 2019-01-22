@@ -1,4 +1,4 @@
-# Use Case 801: User performs Logout
+# Use Case 801: User Performs Logout
 
 ### Subject Area
 Security
