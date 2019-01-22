@@ -22,7 +22,7 @@ Trading
 
 ### Use Case Description
 **Success 1**
-1. User navigates to the `Offer & Requests` tab.
+1. User navigates to the `Offers & Requests` tab.
 2. User navigates to an offer.
 3. System provides (`OUT50`, `OUT60`, `OUT70`, `OUT80`).
 4. User provides a bid (`IN10`).
@@ -31,7 +31,7 @@ Trading
 7. Bid is registered (`OUT10`).
 
 **Success 2**
-1. User navigates to the `Offer & Requests` tab.
+1. User navigates to the `Offers & Requests` tab.
 2. User navigates to an offer.
 3. System provides (`OUT50`, `OUT60`, `OUT70`, `OUT80`).
 4. User sets or has set `Send Notifications for Trading` to false in `User Settings` (`IN20`).
@@ -40,7 +40,7 @@ Trading
 7. User will receive a notification once the offer is confirmed finished by the supplier (`OUT30`).
 
 **Success 3**
-1. User navigates to the `Offer & Requests` tab.
+1. User navigates to the `Offers & Requests` tab.
 2. User navigates to an offer.
 3. System provides (`OUT50`, `OUT60`, `OUT70`, `OUT80`).
 4. User provides a bid (`IN10`).
@@ -50,7 +50,7 @@ Trading
 8. User will receive notifications if a higher bid is made (`OUT30`).
 
 **Success 4**
-1. User navigates to the `Offer & Requests` tab.
+1. User navigates to the `Offers & Requests` tab.
 2. User navigates to an offer.
 3. System provides (`OUT50`, `OUT60`, `OUT70`, `OUT80`).
 4. User sets or has set `Send Notifications for Trading` to true in `User Settings` (`IN20`).
@@ -59,7 +59,7 @@ Trading
 7. User will receive a notification once the offer is confirmed by the supplier (`OUT30`).
 
 **Failed 1**
-1. User navigates to the `Offer & Requests` tab.
+1. User navigates to the `Offers & Requests` tab.
 2. User navigates to an offer.
 3. System provides (`OUT50`, `OUT60`, `OUT70`, `OUT80`).
 4. User provides invalid or incomplete data for the bid (`IN10`).
@@ -73,7 +73,7 @@ Trading
 	- boolean
 
 ### Output Summary
-- `OUT10`: Bid is registered using (`IN10`).
+- `OUT10`: Bid is registered using (`IN10`) and the state is set to `BIDDING` (`NOTE10`).
 - `OUT20`: Bid is registered using (`IN10`) and the state is set to `ACCEPTED` (`NOTE10`).
 - `OUT30`: User receives Discord notifications.
 - `OUT40`: Validation error message is shown below unvalidated field(s).
@@ -83,4 +83,4 @@ Trading
 - `OUT80`: Current user tokens
 
 ### Notes
-- `NOTE10`: Enum values: UNDEFINED, CREATED, ACCEPTED, COMPLETED
+- `NOTE10`: Enum values: UNDEFINED, CREATED, BIDDING, ACCEPTED, COMPLETED
