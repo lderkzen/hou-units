@@ -25,11 +25,10 @@ Trading
 3. User clicks `Report Issue`.
 4. User provides (`IN10`, `IN20`).
 5. User reports issue.
-6. Issue is registered (`OUT20`). 
-7. System assignes officer.
-8. User is shown assigned officer (`OUT10`).
-9. User is forwarded to the `My Bids` tab with the transaction opened (`OUT30`).
-10. The assigned officer receives a notification (`OUT40`) with the transactions url.
+6. Issue is registered (`OUT10`). 
+7. Officers receive a discord notification, including a transaction link (`OUT50`), for an unassigned issue (`OUT40`).
+8. User is forwarded to the `My Bids` tab with the transaction opened (`OUT20`).
+
 
 **Failed 1**
 1. User navigates to the `My Bids` tab.
@@ -37,7 +36,7 @@ Trading
 3. User clicks `Report Issue`.
 4. User provides (`IN10`, `IN20`).
 5. User reports issue.
-6. User is shown validation error message (`OUT50`).
+6. User is shown validation error message (`OUT30`).
 
 ### Input Summary
 - `IN10`: Type of issue
@@ -46,11 +45,11 @@ Trading
 	- required, string, max string length 255
 
 ### Output Summary
-- `OUT10`: Assigned officer.
-- `OUT20`: Issue is registered using (`IN10`, `IN20`).
-- `OUT30`: User is forwarded to `My Bids` tab and is shown the transaction.
-- `OUT40`: The assigned officer (`OUT10`) receives a Discord notification.
-- `OUT50`: Validation error message is shown below unvalidated field(s).
+- `OUT10`: Issue is registered using (`IN10`, `IN20`).
+- `OUT20`: User is forwarded to `My Bids` tab and is shown the transaction.
+- `OUT30`: Validation error message is shown below unvalidated field(s).
+- `OUT40`: Officer channel receives Discord notification.
+- `OUT50`: Transaction link for the registered issue at (`OUT10`).
 
 ### Notes
 - `NOTE10`: Enum values: UNDEFINED, CREATED, ACCEPTED, COMPLETED
