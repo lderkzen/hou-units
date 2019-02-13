@@ -25,7 +25,8 @@ Trading
 4. User sets or has set `Send Notifications for Trading` to false in `User Settings` (`IN60`).
 5. User confirms request.
 6. Request is created (`OUT10`).
-7. User is forwarded to `My Offer & Requests` tab (`OUT20`) and shown their request.
+7. The users tokens are taken and held temporarily. 
+8. User is forwarded to `My Offer & Requests` tab (`OUT20`) and shown their request.
 
 **Success 2**
 1. User navigates to the `Offer & Request Creation` page.
@@ -34,8 +35,9 @@ Trading
 4. User sets or has set `Send Notifications for Trading` to true in `User Settings` (`IN60`).
 5. User confirms request.
 6. Request is created (`OUT10`).
-7. User is forwarded to `My Offer & Requests` tab (`OUT20`) and shown their request.
-8. User will receive notifications for new offers via Discord (`OUT30`).
+7. The users tokens are taken and held temporarily. 
+8. User is forwarded to `My Offer & Requests` tab (`OUT20`) and shown their request.
+9. User will receive notifications for new offers via Discord (`OUT30`).
 
 **Failed 1**
 1. User navigates to the `Offers & Request Creation` page.
@@ -48,7 +50,7 @@ Trading
 - `IN10`: Offer or request
 	- required, enum (`NOTE10`)
 - `IN20`: Cost
-	- required, integer, ranging from 1 to configured system wide maximum
+	- required, integer, ranging from 1 to configured system wide maximum (possibly 1) or current user tokens (`OUT50`)
 - `IN30`: Request lifespan
 	- required, datetime, ranging from today + 3 hours to today + 14 days
 - `IN40`: Item(s) to be requested
@@ -63,6 +65,7 @@ Trading
 - `OUT20`: User is forwarded to `My Offer & Requests` tab and is shown (`OUT10`).
 - `OUT30`: User receives Discord notifications.
 - `OUT40`: Validation error message is shown below unvalidated field(s).
+- `OUT50`: Current user tokens
 
 ### Notes
 - `NOTE10`: Enum values: UNDEFINED, OFFER, REQUEST
