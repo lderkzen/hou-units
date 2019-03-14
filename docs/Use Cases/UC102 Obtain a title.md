@@ -1,34 +1,46 @@
-# Use Case ###: Name
+# Use Case 102: Obtain a title
 
 ### Subject Area
-Group of the use case (e.g. `Trading`, `Events`, `Guild Bank`).
+General
 
 ### Actors
-In which role is the use case executed (e.g. `Unauthorized User`, `Normal Guild Member`, `Leadership Member`)?
-Which other actors participate in the use case?
+`Any Guild Member`
 
 ### Overview
-Brief overview of the use case.
+`Any Guild Member` may obtain a title, being displayed on the Discord profile card.
 
 ### Preconditions
-What conditions must be met so this use case can be performed? Does this use case depend upon other use cases?
+- User does not own a title.
 
 ### Termination Outcome
-What are the possible successful and unseccessful results of this use case?
+- **Success 1:** User obtains the selected title.
+- **Failed 1:** User has insufficient tokens to obtain the selected title.
 
 ### Use Case Description
-List of the possible actions the actor performs, and the termination outcomes, including references to mandatory and optional input and output data.
+**Success 1**
+1. User navigates to the `Profile` page
+2. User is displayed the current token balance (`OUT20`) in the navigation bar
+3. User goes to the `Title` section, where all available titles are displayed (`OUT10`)
+4. User selects a title (`IN10`) which is cheap enough to obtain
+5. User confirms the purchase
+6. User is shown the success message (`OUT30`)
+
+**Failed 1**
+1. User navigates to the `Profile` page
+2. User is displayed the current token balance (`OUT20`) in the navigation bar
+3. User goes to the `Title` section, where all available titles are displayed (`OUT10`)
+4. User selects a title (`IN10`) which is to expensive to obtain
+5. User confirms the purchase
+6. User is shown the failure message (`OUT40`)
 
 ### Input Summary
-What data input will the actor provide?  
-Numbering like `IN10`, `IN20`, `IN30`, etc., leaving space in between to add additional data inputs afterwards.  
-Provide additional information as sub-list.
+- `IN10`: Title selected by the user
 
 ### Output Summary
-What data output will the system provide?  
-Numbering like `OUT10`, `OUT20`, `OUT30`, etc., leaving space in between to add additional data outputs afterwards.  
-Provide additional information as sub-list.
+- `OUT10`: List of available titles and their prices
+- `OUT20`: Current token balance
+- `OUT30`: Success message, title is obtained
+- `OUT40`: Failure message, title is *not* obtained
 
 ### Notes
-Any additional notes to the use case.  
-If referenced, number notes using the same pattern as input and output, applying the naming `NOTE10`, `NOTE20`, etc.
+- `NOTE10`: Titles will decay the same way as everything else in the system.
