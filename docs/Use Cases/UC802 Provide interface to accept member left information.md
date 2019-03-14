@@ -1,34 +1,36 @@
-# Use Case ###: Name
+# Use Case 802: Provide interface to accept member left information
 
 ### Subject Area
-Group of the use case (e.g. `Trading`, `Events`, `Guild Bank`).
+Web API
 
 ### Actors
-In which role is the use case executed (e.g. `Unauthorized User`, `Normal Guild Member`, `Leadership Member`)?
-Which other actors participate in the use case?
+`Discord bot`
 
 ### Overview
-Brief overview of the use case.
+When a member left, the Discord bot will push a single notification to the API.
 
 ### Preconditions
-What conditions must be met so this use case can be performed? Does this use case depend upon other use cases?
+The bot instance must be authenticated and authorized.
 
 ### Termination Outcome
-What are the possible successful and unseccessful results of this use case?
+- **Success 1:** The API will respond a success.
+- **Failed 1:** The API fails to respond.
 
 ### Use Case Description
-List of the possible actions the actor performs, and the termination outcomes, including references to mandatory and optional input and output data.
+**Success 1**
+1. Bot pushes a member left notification (`IN10`) to the endpoint for member left handling
+2. API returns HTTP200 (`OUT10`) in the response header
+
+**Failed 1**
+1. Bot pushes a member left notification (`IN10`) to the endpoint for member left handling
+2. API returns a **none** HTTP200 (`OUT10`) in the response header
 
 ### Input Summary
-What data input will the actor provide?  
-Numbering like `IN10`, `IN20`, `IN30`, etc., leaving space in between to add additional data inputs afterwards.  
-Provide additional information as sub-list.
+- `IN10`: A member that is no longer allowed to access the system
+    - required, `DiscordUserID`
 
 ### Output Summary
-What data output will the system provide?  
-Numbering like `OUT10`, `OUT20`, `OUT30`, etc., leaving space in between to add additional data outputs afterwards.  
-Provide additional information as sub-list.
+- `OUT10`: Response HTTP status code
 
 ### Notes
-Any additional notes to the use case.  
-If referenced, number notes using the same pattern as input and output, applying the naming `NOTE10`, `NOTE20`, etc.
+Currently no nodes to this use case.
