@@ -4,11 +4,10 @@ The following subject areas have to be used throughout the use cases:
 - 200 Events
 - 300 Trading
 - 400 Guild Bank
-- 500 Events
-- 600 Services
-- 700 Transactions
-- 800 Security
-- 900 Web API
+- 500 Services
+- 600 Transactions
+- 700 Security
+- 800 Web API
 
 Use cases shall not be part of multiple subject areas. If the need for multiple subject areas arises, the use case may either be split, or assigned to the greater subject area.
 
