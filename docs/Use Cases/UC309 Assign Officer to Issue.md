@@ -19,6 +19,11 @@ Trading
 - **Success 3:** Officer assigned. Both users are notified.
 
 ### Use Case Description
+**Success 1**
+
+**Success 2**
+
+**Success 3**
 
 
 ### Input Summary
