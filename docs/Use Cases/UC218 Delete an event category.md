@@ -1,34 +1,44 @@
-# Use Case ###: Name
+# Use Case 218: Delete an event category
 
 ### Subject Area
-Group of the use case (e.g. `Trading`, `Events`, `Guild Bank`).
+Events
 
 ### Actors
-In which role is the use case executed (e.g. `Unauthorized User`, `Normal Guild Member`, `Leadership Member`)?
-Which other actors participate in the use case?
+`Leadership Member`
 
 ### Overview
-Brief overview of the use case.
+Delete an existing event category.
 
 ### Preconditions
-What conditions must be met so this use case can be performed? Does this use case depend upon other use cases?
+- At least one event category must exist.
+- Event category must be unused for future events, event series and event templates.
 
 ### Termination Outcome
-What are the possible successful and unseccessful results of this use case?
+- **Success 1:** The event category is deleted.
+- **Failed 1:** The event category wasn't delete due to an error.
 
 ### Use Case Description
-List of the possible actions the actor performs, and the termination outcomes, including references to mandatory and optional input and output data.
+**Success 1**
+1. User navigates to the `Administration` page.
+2. User scrolls to the `Events` category.
+3. User navigates to the `Manage event categories` page and is displayed the current categories (`OUT10`).
+4. User clicks on `Delete Event Category` for an existing event category (`IN10`).
+5. User is redirected to the `Manage event categories` page and is displayed the current categories (`OUT10`), as well as the success message (`OUT20`).
+
+**Failed 1**
+1. User navigates to the `Administration` page.
+2. User scrolls to the `Events` category.
+3. User navigates to the `Manage event categories` page and is displayed the current categories (`OUT10`).
+4. User clicks on `Delete Event Category` for an existing event category (`IN10`).
+5. User is redirected to the `Manage event categories` page and is displayed the current categories (`OUT10`), as well as the error message (`OUT30`).
 
 ### Input Summary
-What data input will the actor provide?  
-Numbering like `IN10`, `IN20`, `IN30`, etc., leaving space in between to add additional data inputs afterwards.  
-Provide additional information as sub-list.
+- `IN10`: An existing event category.
 
 ### Output Summary
-What data output will the system provide?  
-Numbering like `OUT10`, `OUT20`, `OUT30`, etc., leaving space in between to add additional data outputs afterwards.  
-Provide additional information as sub-list.
+- `OUT10`: A list of existing event categories.
+- `OUT20`: Success message for the deleted event category.
+- `OUT30`: Error message that the category was not deleted, including the error reason.
 
 ### Notes
-Any additional notes to the use case.  
-If referenced, number notes using the same pattern as input and output, applying the naming `NOTE10`, `NOTE20`, etc.
+- `NOTE10`: Event categories will be flagged as `Deleted`, rather than deleted completetly. This disables future selection of the category, but allows to view the history of events and their categories.

@@ -1,34 +1,98 @@
-# Use Case ###: Name
+# Use Case 207: Join an event
 
 ### Subject Area
-Group of the use case (e.g. `Trading`, `Events`, `Guild Bank`).
+Events
 
 ### Actors
-In which role is the use case executed (e.g. `Unauthorized User`, `Normal Guild Member`, `Leadership Member`)?
-Which other actors participate in the use case?
+`Any Guild Member`
 
 ### Overview
-Brief overview of the use case.
+Sign up for an upcoming event.
 
 ### Preconditions
-What conditions must be met so this use case can be performed? Does this use case depend upon other use cases?
+- Event must start in the future.
+- Event must be open for registration.
+- User may not be blacklisted from joining events.
+- User may not be the event creator.
+- The event roster and waiting list are not full.
 
 ### Termination Outcome
-What are the possible successful and unseccessful results of this use case?
+- **Success 1:** Dashboard: User is signed up and put into the roster.
+- **Success 2:** Dashboard: User is signed up and put into the waiting list.
+- **Success 3:** Upcoming Events: User is signed up and put into the roster.
+- **Success 4:** Upcoming Events: User is signed up and put into the waiting list.
+- **Success 5:** Event: User is signed up and put into the roster.
+- **Success 6:** Event: User is signed up and put into the waiting list.
+- **Failed 1:** Dashboard: Signing up failed due to a technical error.
+- **Failed 2:** Upcoming Events: Signing up failed due to a technical error.
+- **Failed 3:** Event: Signing up failed due to a technical error.
 
 ### Use Case Description
-List of the possible actions the actor performs, and the termination outcomes, including references to mandatory and optional input and output data.
+**Success 1**
+1. User navigates to the `Dashboard` page.
+2. User is displayed a list of upcoming events (`OUT20`), as well as an indicator about the available slots for each event (`OUT30` and `OUT40`).
+3. User signs up for an event (`IN10`) with his primary class (`OUT20`).
+4. User is displayed a `JOINED` indicator (`OUT50`) for the signed up event.
+
+**Success 2**
+1. User navigates to the `Dashboard` page.
+2. User is displayed a list of upcoming events (`OUT20`), as well as an indicator about the available slots for each event (`OUT30` and `OUT40`).
+3. User signs up for an event (`IN10`) with his primary class (`OUT20`).
+4. User is displayed a `WAIT` indicator (`OUT60`) for the signed up event.
+
+**Success 3**
+1. User navigates to the `Upcoming Events` page.
+2. User is displayed a list of upcoming events (`OUT20`), as well as an indicator about the available slots for each event (`OUT30` and `OUT40`).
+3. User signs up for an event (`IN10`) with his primary class (`OUT20`).
+4. User is displayed a `JOINED` indicator (`OUT50`) for the signed up event.
+
+**Success 4**
+1. User navigates to the `Upcoming Events` page.
+2. User is displayed a list of upcoming events (`OUT20`), as well as an indicator about the available slots for each event (`OUT30` and `OUT40`).
+3. User signs up for an event (`IN10`) with his primary class (`OUT20`).
+4. User is displayed a `WAIT` indicator (`OUT60`) for the signed up event.
+
+**Success 5**
+1. User navigates to the page of a specific `Event`.
+2. User is displayed an indicator about the available slots for the event (`OUT30` and `OUT40`).
+3. User signs up for the event (`IN10`) with his primary class (`OUT20`).
+4. User is redirected to the same `Event` page and displayed a "added to roster" message (`OUT50`) for the signed up event.
+
+**Success 6**
+1. User navigates to the page of a specific `Event`.
+2. User is displayed an indicator about the available slots for the event (`OUT30` and `OUT40`).
+3. User signs up for the event (`IN10`) with his primary class (`OUT20`).
+4. User is redirected to the same `Event` page and displayed a "added to waiting list" message (`OUT50`) for the signed up event.
+
+**Failed 1**
+1. User navigates to the `Dashboard` page.
+2. User is displayed a list of upcoming events (`OUT20`), as well as an indicator about the available slots for each event (`OUT30` and `OUT40`).
+3. User signs up for an event (`IN10`) with his primary class (`OUT20`).
+4. User is redirected to the `Event` page and displayed an error message (`OUT70`) for the signed up event.
+
+**Failed 2**
+1. User navigates to the `Upcoming Events` page.
+2. User is displayed a list of upcoming events (`OUT20`), as well as an indicator about the available slots for each event (`OUT30` and `OUT40`).
+3. User signs up for an event (`IN10`) with his primary class (`OUT20`).
+4. User is redirected to the `Event` page and displayed an error message (`OUT70`) for the signed up event.
+
+**Failed 3**
+1. User navigates to the page of a specific `Event`.
+2. User is displayed an indicator about the available slots for the event (`OUT30` and `OUT40`).
+3. User signs up for the event (`IN10`) with his primary class (`OUT20`).
+4. User is redirected to the same `Event` page and displayed an error message (`OUT70`) for the signed up event.
 
 ### Input Summary
-What data input will the actor provide?  
-Numbering like `IN10`, `IN20`, `IN30`, etc., leaving space in between to add additional data inputs afterwards.  
-Provide additional information as sub-list.
+- `IN10`: Sign up request for an upcoming event.
 
 ### Output Summary
-What data output will the system provide?  
-Numbering like `OUT10`, `OUT20`, `OUT30`, etc., leaving space in between to add additional data outputs afterwards.  
-Provide additional information as sub-list.
+- `OUT10`: List of upcoming events.
+- `OUT20`: The users primary class.
+- `OUT30`: Indicator, how many slots are available in the roster.
+- `OUT40`: Indicator, how many slots are available in the waiting list.
+- `OUT50`: Success message or indicator, that the user is signed up and put into the roster.
+- `OUT60`: Success message or indicator, that the user is signed up and put into the waiting list.
+- `OUT70`: Error message that the signing up failed, including the error reason.
 
 ### Notes
-Any additional notes to the use case.  
-If referenced, number notes using the same pattern as input and output, applying the naming `NOTE10`, `NOTE20`, etc.
+- `NOTE10`: If the event roster and waiting list have class restricitons (e.g. 5 mages in the roster, 3 mages in the waiting list), `OUT30` and `OUT40` will indicate the available slots for the users primary class (`OUT20`), instead of the complete number of available slots.
