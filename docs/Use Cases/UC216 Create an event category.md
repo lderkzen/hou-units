@@ -1,34 +1,68 @@
-# Use Case ###: Name
+# Use Case 216: Create an event category
 
 ### Subject Area
-Group of the use case (e.g. `Trading`, `Events`, `Guild Bank`).
+Events
 
 ### Actors
-In which role is the use case executed (e.g. `Unauthorized User`, `Normal Guild Member`, `Leadership Member`)?
-Which other actors participate in the use case?
+`Leadership Member`
 
 ### Overview
-Brief overview of the use case.
+Create an event category, which will be used to group events and event series.
 
 ### Preconditions
-What conditions must be met so this use case can be performed? Does this use case depend upon other use cases?
+No preconditions.
 
 ### Termination Outcome
-What are the possible successful and unseccessful results of this use case?
+- **Success 1:** The event category is created.
+- **Success 2:** A deleted event category is re-enabled.
+- **Failed 1:** The event category wasn't created due to a collision with an existing event category name.
+- **Failed 2:** The event category wasn't created due to an error.
 
 ### Use Case Description
-List of the possible actions the actor performs, and the termination outcomes, including references to mandatory and optional input and output data.
+**Success 1**
+1. User navigates to the `Administration` page.
+2. User scrolls to the `Events` category.
+3. User navigates to the `Manage event categories` page and is displayed the current categories (`OUT10`).
+4. User clicks on `Add Event Category` and is taken to that page.
+5. User provides a new event category name (`IN10`).
+6. User clicks on `Save`.
+7. User is redirected to the `Manage event categories` page, being displayed the success message (`OUT20`).
+
+**Success 2**
+1. User navigates to the `Administration` page.
+2. User scrolls to the `Events` category.
+3. User navigates to the `Manage event categories` page and is displayed the current categories (`OUT10`).
+4. User clicks on `Add Event Category` and is taken to that page.
+5. User provides an event category name (`IN10`), that was previously flagged as deleted.
+6. User clicks on `Save`.
+7. User is redirected to the `Manage event categories` page, being displayed the success message (`OUT20`).
+
+**Failed 1**
+1. User navigates to the `Administration` page.
+2. User scrolls to the `Events` category.
+3. User navigates to the `Manage event categories` page and is displayed the current categories (`OUT10`).
+4. User clicks on `Add Event Category` and is taken to that page.
+5. User provides a new event category name (`IN10`).
+6. User clicks on `Save`.
+7. User is redirected to the `Add Event Category` page, being displayed the warning message (`OUT30`).
+
+**Failed 2**
+1. User navigates to the `Administration` page.
+2. User scrolls to the `Events` category.
+3. User navigates to the `Manage event categories` page and is displayed the current categories (`OUT10`).
+4. User clicks on `Add Event Category` and is taken to that page.
+5. User provides a new event category name (`IN10`).
+6. User clicks on `Save`.
+7. User is redirected to the `Add Event Category` page, being displayed the error message (`OUT40`).
 
 ### Input Summary
-What data input will the actor provide?  
-Numbering like `IN10`, `IN20`, `IN30`, etc., leaving space in between to add additional data inputs afterwards.  
-Provide additional information as sub-list.
+- `IN10`: An event category name.
 
 ### Output Summary
-What data output will the system provide?  
-Numbering like `OUT10`, `OUT20`, `OUT30`, etc., leaving space in between to add additional data outputs afterwards.  
-Provide additional information as sub-list.
+- `OUT10`: A list of existing event categories.
+- `OUT20`: Success message for the newly created event category.
+- `OUT30`: Warning is displayed, that the name collides with an existing name of a different event category.
+- `OUT40`: Error message that the category was not created, including the error reason.
 
 ### Notes
-Any additional notes to the use case.  
-If referenced, number notes using the same pattern as input and output, applying the naming `NOTE10`, `NOTE20`, etc.
+- `NOTE10`: Maximum event category name length is limited to 25 characters.
