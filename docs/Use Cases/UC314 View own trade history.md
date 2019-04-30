@@ -29,7 +29,7 @@ No input.
 ### Notes
 - `NOTE10`: Enum values
 	- Requests: UNDEFINED, CREATED, ACCEPTED, COMPLETED
-	- Offers: UNDEFINED, CREATED, BIDDING, ACCEPTED, COMPLETED
+	- Offers: UNDEFINED, CREATED, PURCHASED, COMPLETED
 - `NOTE20`: Transactions considered history (`NOTE10`)
-	- Requests: `COMPLETED`
-	- Offers: `COMPLETED`
+	- Requests: COMPLETED
+	- Offers: COMPLETED

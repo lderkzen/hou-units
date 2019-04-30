@@ -12,7 +12,7 @@ Trading
 ### Preconditions
 - User must be logged in.
 - User must have replied or bid on a transaction **or** user must be creator of the transaction.
-	- The transaction must have state ACCEPTED (`NOTE10`).
+	- The transaction must have state `ACCEPTED` or `PURCHASED` (`NOTE10`).
 
 ### Termination Outcome
 - **Success 1:** Transaction confirmed. Waiting for the other players confirmation.
@@ -33,8 +33,8 @@ Trading
 3. User trades / has traded the items in-game.
 4. User confirms the transaction (`IN10`).
 5. Confirmation registered (`OUT10`).
-6. Other user is notified that the transaction is waiting for confirmation (`OUT20`).
-7. Other user sets or has set `Send Notifications for Trading` to true in `User Settings` (`OUT30`).
+6. Other user sets or has set `Send Notifications for Trading` to true in `User Settings` (`OUT30`).
+7. Other user is notified that the transaction is waiting for confirmation (`OUT20`).
 
 ### Input Summary
 - `IN10`: Confirmation
@@ -48,4 +48,4 @@ Trading
 ### Notes
 - `NOTE10`: Enum values
 	- Requests: UNDEFINED, CREATED, ACCEPTED, COMPLETED
-	- Offers: UNDEFINED, CREATED, BIDDING, ACCEPTED, COMPLETED
+	- Offers: UNDEFINED, CREATED, PURCHASED, COMPLETED

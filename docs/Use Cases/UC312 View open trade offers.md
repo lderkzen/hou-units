@@ -11,7 +11,7 @@ Trading
 
 ### Preconditions
 - User must be logged in.
-- Trade offers must have state CREATED or BIDDING (`NOTE10`).
+- Trade offers must have state `CREATED` (`NOTE10`).
 
 ### Termination Outcome
 - **Success 1:** User is shown a list of all offers.
@@ -23,11 +23,11 @@ Trading
 3. System fills page with offers (`OUT10`).
 
 ### Input Summary
-- `IN10`: Filtering checkboxes
+- `IN10`: Filtering checkboxes targeting transactions
 
 ### Output Summary
-- `OUT10`: `Offers & Requests` tab filled with offers with state CREATED or BIDDING (`NOTE10`).
+- `OUT10`: `Offers & Requests` tab filled with offers with state `CREATED` (`NOTE10`).
 
 ### Notes
 - `NOTE10`: Enum values
-	- Offers: UNDEFINED, CREATED, BIDDING, ACCEPTED, COMPLETED
+	- Offers: UNDEFINED, CREATED, PURCHASED, COMPLETED

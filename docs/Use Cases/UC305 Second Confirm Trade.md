@@ -12,12 +12,12 @@ Trading
 ### Preconditions
 - User must be logged in.
 - User must have replied or bid on a transaction **or** user must be creator of the transaction.
-	- The transaction must have state ACCEPTED (`NOTE10`).
+	- The transaction must have state `ACCEPTED` or `PURCHASED` (`NOTE10`).
 - Another player must have confirmed the transaction first.
 
 ### Termination Outcome
-- **Success 1:** Transaction confirmed to be finished and `COMPLETED` (`NOTE10`). Tokens are wired.
-- **Success 2:** Transaction confirmed to be finished and `COMPLETED` (`NOTE10`). Tokens are wired. Other user receives a notification.
+- **Success 1:** Transaction confirmed to be finished and `COMPLETED` (`NOTE10`). Tokens are transferred.
+- **Success 2:** Transaction confirmed to be finished and `COMPLETED` (`NOTE10`). Tokens are transferred. Other user receives a notification.
 
 ### Use Case Description
 **Success 1**
@@ -53,4 +53,4 @@ Trading
 ### Notes
 - `NOTE10`: Enum values
 	- Requests: UNDEFINED, CREATED, ACCEPTED, COMPLETED
-	- Offers: UNDEFINED, CREATED, BIDDING, ACCEPTED, COMPLETED
+	- Offers: UNDEFINED, CREATED, PURCHASED, COMPLETED

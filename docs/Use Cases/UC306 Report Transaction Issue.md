@@ -11,7 +11,7 @@ Trading
 
 ### Preconditions
 - The user must be logged in.
-- The transaction must have state `ACCEPTED` or `COMPLETED` (`NOTE10`).
+- The transaction must have state `ACCEPTED`, `PURCHASED` or `COMPLETED` (`NOTE10`).
 - The user must be participating in the transaction.
 
 ### Termination Outcome
@@ -26,7 +26,7 @@ Trading
 4. User provides (`IN10`, `IN20`).
 5. User reports issue.
 6. Issue is registered (`OUT10`). 
-7. Officers receive a discord notification, including a transaction link (`OUT50`), for an unassigned issue (`OUT40`).
+7. Officers receive a discord notification, including a transaction link (`OUT50`), with the unassigned issue (`OUT40`).
 8. User is forwarded to the `My Bids` tab with the transaction opened (`OUT20`).
 
 
@@ -52,8 +52,8 @@ Trading
 - `OUT50`: Transaction link for the registered issue at (`OUT10`).
 
 ### Notes
-- `NOTE10`: Enum values: UNDEFINED, CREATED, ACCEPTED, COMPLETED
+- `NOTE10`: Enum values: UNDEFINED, CREATED, ACCEPTED || PURCHASED, COMPLETED
 - `NOTE20`: Preset strings, selected from selection box.
-	- "Other user does not respond"
+	- "Other user is not responding"
 	- "The items were not transferred"
 	- "I didn't receive the tokens" - Only when `COMPLETED` (`NOTE10`)

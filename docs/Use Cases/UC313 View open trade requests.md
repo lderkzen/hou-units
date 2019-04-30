@@ -11,7 +11,7 @@ Trading
 
 ### Preconditions
 - User must be logged in.
-- Trade requests must have state CREATED (`NOTE10`).
+- Trade requests must have state `CREATED` (`NOTE10`).
 
 ### Termination Outcome
 - **Success 1:** User is shown a list of all requests.
@@ -23,10 +23,10 @@ Trading
 3. System fills page with requests (`OUT10`).
 
 ### Input Summary
-- `IN10`: Filtering checkboxes
+- `IN10`: Filtering checkboxes targeting transactions
 
 ### Output Summary
-- `OUT10`: `Offers & Requests` tab filled with requests with state CREATED (`NOTE10`).
+- `OUT10`: `Offers & Requests` tab filled with requests with state `CREATED` (`NOTE10`).
 
 ### Notes
 - `NOTE10`: Enum values
