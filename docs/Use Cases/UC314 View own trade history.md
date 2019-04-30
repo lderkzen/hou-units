@@ -1,34 +1,35 @@
-# Use Case ###: Name
+# Use Case 314: View Own Trade History
 
 ### Subject Area
-Group of the use case (e.g. `Trading`, `Events`, `Guild Bank`).
+Trading
 
 ### Actors
-In which role is the use case executed (e.g. `Unauthorized User`, `Normal Guild Member`, `Leadership Member`)?
-Which other actors participate in the use case?
+Any Guild Member
 
 ### Overview
-Brief overview of the use case.
+`Any Guild Member` may view their own trade history.
 
 ### Preconditions
-What conditions must be met so this use case can be performed? Does this use case depend upon other use cases?
+- User must be logged in.
 
 ### Termination Outcome
-What are the possible successful and unseccessful results of this use case?
+**Success 1**: User is shown all past transactions.
 
 ### Use Case Description
-List of the possible actions the actor performs, and the termination outcomes, including references to mandatory and optional input and output data.
+**Success 1**:
+1. User navigates to `Transaction History` page.
+2. System provides all past transactions (`OUT10`).
 
 ### Input Summary
-What data input will the actor provide?  
-Numbering like `IN10`, `IN20`, `IN30`, etc., leaving space in between to add additional data inputs afterwards.  
-Provide additional information as sub-list.
+No input.
 
 ### Output Summary
-What data output will the system provide?  
-Numbering like `OUT10`, `OUT20`, `OUT30`, etc., leaving space in between to add additional data outputs afterwards.  
-Provide additional information as sub-list.
+- `OUT10`: User is shown `Trasaction History` (`NOTE20`)
 
 ### Notes
-Any additional notes to the use case.  
-If referenced, number notes using the same pattern as input and output, applying the naming `NOTE10`, `NOTE20`, etc.
+- `NOTE10`: Enum values
+	- Requests: UNDEFINED, CREATED, ACCEPTED, COMPLETED
+	- Offers: UNDEFINED, CREATED, BIDDING, ACCEPTED, COMPLETED
+- `NOTE20`: Transactions considered history (`NOTE10`)
+	- Requests: `COMPLETED`
+	- Offers: `COMPLETED`

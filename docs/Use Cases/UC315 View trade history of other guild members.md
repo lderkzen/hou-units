@@ -13,7 +13,7 @@ Trading
 - User must be logged in.
 
 ### Termination Outcome
-**Success 1**: User is shown all ongoing transaction of selected `Any Guild Member`.
+**Success 1**: User is shown all past transaction of selected `Any Guild Member`.
 
 ### Use Case Description
 **Success 1**:
@@ -25,7 +25,7 @@ Trading
 No input.
 
 ### Output Summary
-- `OUT10`: User is shown `Transaction History` (`NOTE20`);
+- `OUT10`: User is shown `Transaction History` (`NOTE20`)
 
 ### Notes
 - `NOTE10`: Enum values
