@@ -55,7 +55,7 @@ Guild members can perform ***basic actions***, as well as ***advanced actions***
 | ReplyServiceRequest | Must be `Any Guild Member`, but not blacklisted from replying service requests. |
 | ConfirmServiceRequest | Must be `Any Guild Member`, and either the creator of the service request or person replying to the service request. |
 | ReportServiceIssue | Must be `Any Guild Member`, and either the creator of the service request or person replying to the service request. |
-| AssignOfficer | Must be a `Leader` or `Officer`. |
+| AssignIssue | Must be a `Leader` or `Officer`. |
 | ManageBlacklistForCreatingServiceRequest | Must be a `Leader` or `Officer`. |
 | ManageBlacklistForReplyingToServiceRequest | Must be a `Leader` or `Officer`. |
 | ViewServiceRequestHistory | Must be a `Leader` or `Officer`,<br>- or -<br>Must be `Any Guild Member`, who created the service request or replied to the service request. |
@@ -74,7 +74,7 @@ Guild members can perform ***basic actions***, as well as ***advanced actions***
 | ReplyTradeRequest | Must be `Any Guild Member`, but not blacklisted from replying trade requests. |
 | ConfirmTrade | Must be `Any Guild Member`, and either the creator of the trade or person replying to the trade. |
 | ReportTradeIssue | Must be `Any Guild Member`, and either the creator of the trade or person replying to the trade. |
-| AssignOfficer | Must be a `Leader` or `Officer`. |
+| AssignIssue | Must be a `Leader` or `Officer`. |
 | ManageBlacklistForCreatingTradeOffers | Must be a `Leader` or `Officer`. |
 | ManageBlacklistForCreatingTradeRequests | Must be a `Leader` or `Officer`. |
 | ManageBlacklistForReplyingToTradeOffers | Must be a `Leader` or `Officer`. |
