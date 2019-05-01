@@ -37,7 +37,7 @@ Trading
 6. Request is created (`OUT10`).
 7. The users tokens are taken and held temporarily. 
 8. User is forwarded to `My Offer & Requests` tab (`OUT20`) and shown their request.
-9. User will receive notifications for new offers via Discord (`OUT30`).
+9. User will receive notifications for replies via Discord (`OUT30`).
 
 **Failed 1**
 1. User navigates to the `Offers & Request Creation` page.
@@ -54,7 +54,7 @@ Trading
 - `IN30`: Request lifespan
 	- required, datetime, ranging from today + 3 hours to today + 14 days
 - `IN40`: Item(s) to be requested
-	- required, object, ranging from 1 to configured system wide maximum (possibly 1)
+	- required, object, ranging from 1 to configured system wide maximum (possibly 1), allowed by ruling council (`OUT60`)
 - `IN50`: Amount of each (`IN40`)
 	- required, integer, ranging from 1 to configured system wide maximum
 - `IN60`: User Setting: Notifications for Trading
@@ -65,7 +65,8 @@ Trading
 - `OUT20`: User is forwarded to `My Offer & Requests` tab and is shown (`OUT10`).
 - `OUT30`: User receives Discord notifications.
 - `OUT40`: Validation error message is shown below unvalidated field(s).
-- `OUT50`: Current user tokens
+- `OUT50`: Current user tokens.
+- `OUT60`: Allowed items for P2P trading.
 
 ### Notes
 - `NOTE10`: Enum values: UNDEFINED, OFFER, REQUEST
