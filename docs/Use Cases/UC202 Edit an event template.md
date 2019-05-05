@@ -1,4 +1,4 @@
-# Use Case 222: Award bonus tokens during an event
+# Use Case 202: Edit an event template
 
 ### Subject Area
 Events

@@ -1,4 +1,4 @@
-# Use Case 210: View event history
+# Use Case 271: Leave an event
 
 ### Subject Area
 Events

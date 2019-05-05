@@ -1,4 +1,4 @@
-# Use Case 214: View upcoming events
+# Use Case 272: Award bonus tokens during an event
 
 ### Subject Area
 Events

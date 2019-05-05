@@ -1,4 +1,4 @@
-# Use Case 209: Check event attendance
+# Use Case 203: Delete an event template
 
 ### Subject Area
 Events

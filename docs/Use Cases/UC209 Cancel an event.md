@@ -1,4 +1,4 @@
-# Use Case 201: Create an event
+# Use Case 209: Edit an event
 
 ### Subject Area
 Events

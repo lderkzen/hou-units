@@ -1,4 +1,4 @@
-# Use Case 217: Edit an event category
+# Use Case 211: Edit an event category
 
 ### Subject Area
 Events

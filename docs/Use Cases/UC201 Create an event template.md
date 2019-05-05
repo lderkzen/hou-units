@@ -1,4 +1,4 @@
-# Use Case 208: Leave an event
+# Use Case 201: Create an event template
 
 ### Subject Area
 Events

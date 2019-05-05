@@ -1,4 +1,4 @@
-# Use Case 213: Assign item drop from raid event to guild bank
+# Use Case 208: Edit an event
 
 ### Subject Area
 Events

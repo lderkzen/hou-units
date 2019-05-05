@@ -1,4 +1,4 @@
-# Use Case 220: Edit an event template
+# Use Case 280: Assign item drop from raid event to player
 
 ### Subject Area
 Events

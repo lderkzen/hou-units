@@ -1,4 +1,4 @@
-# Use Case 219: Create an event template
+# Use Case 281: Assign item drop from raid event to guild bank
 
 ### Subject Area
 Events

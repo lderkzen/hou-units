@@ -1,4 +1,4 @@
-# Use Case 211: Add item drop to raid event
+# Use Case 207: Create an event
 
 ### Subject Area
 Events

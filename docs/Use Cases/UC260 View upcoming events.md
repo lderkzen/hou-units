@@ -1,4 +1,5 @@
-# Use Case 221: Delete an event template
+# Use Case 260
+: View upcoming events
 
 ### Subject Area
 Events

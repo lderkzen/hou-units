@@ -1,4 +1,4 @@
-# Use Case 212: Assign item drop from raid event to player
+# Use Case 273: Add item drop to raid event
 
 ### Subject Area
 Events

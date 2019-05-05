@@ -1,4 +1,4 @@
-# Use Case 215: Start bidding phase for raid drop items
+# Use Case 282: Start bidding phase for raid drop items
 
 ### Subject Area
 Events
