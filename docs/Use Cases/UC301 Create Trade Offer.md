@@ -1,4 +1,4 @@
-# Use Case 301: Create Trade Offer
+	# Use Case 301: Create Trade Offer
 
 ### Subject Area
 Trading
@@ -54,7 +54,7 @@ Trading
 - `IN40`: Offer lifespan
     - required, datetime, ranging from today + 3 hours to today + 14 days
 - `IN50`: Item(s) to be offered
-    - required, object, ranging from 1 to configured system wide maximum (possibly 1)
+    - required, object, ranging from 1 to configured system wide maximum (possibly 1), allowed by ruling council (`OUT50`)
 - `IN60`: Amount of each (`IN40`)
     - required, integer, ranging from 1 to configured system wide maximum
 - `IN70`: Image link
@@ -67,7 +67,8 @@ Trading
 - `OUT20`: User forwarded to `My Offers & Requests` tab and is shown (`OUT10`).
 - `OUT30`: User receives Discord notifications.
 - `OUT40`: Validation error message is shown below unvalidated field(s).
+- `OUT50`: Allowed items for P2P trading.
 
 ### Notes
 - `NOTE10`: Enum values: UNDEFINED, OFFER, REQUEST
-- `NOTE20`: Enum values: UNDEFINED, CREATED, BIDDING, ACCEPTED, COMPLETED
+- `NOTE20`: Enum values: UNDEFINED, CREATED, PURCHASED, COMPLETED

@@ -35,4 +35,4 @@ No input.
 - `OUT30`: User is forwarded to `My Offers & Requests` tab.
 
 ### Notes
-- `NOTE10`: Enum values: UNDEFINED, CREATED, BIDDING, ACCEPTED, COMPLETED
+- `NOTE10`: Enum values: UNDEFINED, CREATED, PURCHASED, COMPLETED
