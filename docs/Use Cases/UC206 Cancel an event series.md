@@ -1,7 +1,7 @@
-# Use Case ###: Name
+# Use Case 206: Cancel an event series
 
 ### Subject Area
-Group of the use case (e.g. `Trading`, `Events`, `Guild Bank`).
+Events
 
 ### Actors
 In which role is the use case executed (e.g. `Unauthorized User`, `Normal Guild Member`, `Leadership Member`)?

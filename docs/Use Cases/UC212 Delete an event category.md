@@ -1,4 +1,4 @@
-# Use Case 218: Delete an event category
+# Use Case 212: Delete an event category
 
 ### Subject Area
 Events

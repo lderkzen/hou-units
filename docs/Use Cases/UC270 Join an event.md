@@ -1,4 +1,4 @@
-# Use Case 207: Join an event
+# Use Case 270: Join an event
 
 ### Subject Area
 Events

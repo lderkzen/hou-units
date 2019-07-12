@@ -1,4 +1,4 @@
-# Use Case 216: Create an event category
+# Use Case 210: Create an event category
 
 ### Subject Area
 Events
